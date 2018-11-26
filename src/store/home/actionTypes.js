@@ -1,0 +1,1 @@
+export const GET_SWIPERLIST = 'GET_SWIPERLIST'
