@@ -1,12 +1,8 @@
 import React,{ Component } from 'react'
 
-
 import Ul from '@c/commons/ul'
+import mainWrapper from '@c/HOC/mainWrapper'
 import SmallLi from '@c/commons/smallLi'
-import LoadMore from '@c/commons/loadmore'
-import Footer from '@c/commons/footer'
-import scroll from 'better-scroll'
-
 import axios from 'axios';
 
 class FontContainer extends Component {
@@ -16,38 +12,19 @@ class FontContainer extends Component {
             recommends: [],
             page:1,
         }
-        this.loadMore = this.loadMore.bind(this);
-        this.backTop = this.backTop.bind(this);
+       
     }
-
     componentWillMount(){
         this.getSwiperList();
     }
-
     render(){
-        // if(this.state.recommends.length <=0) return false;
-        return (
-            <div style={{width:'100%',height:'571px',overflow:'hidden'}} ref={el => this.scrollWrapper = el}>
-                <div >
-                    <Ul>
-                        {this.renderItem()}
-                    </Ul>
-                    <LoadMore loadMore={this.loadMore}></LoadMore>
-                    <Footer backTop={this.backTop}></Footer>
-                </div>
-            </div>
+        return(
+            <Ul>
+                {this.renderItem()}
+            </Ul>
         )
     }
-    componentDidMount(){
-        this.scroll = new scroll(this.scrollWrapper,{
-            click: true,
-            mouseWheel:true,
-        })
-    }
-   
-    backTop(){
-        this.scroll.scrollTo(0,0,500)
-    }
+    
     renderItem(){
         return this.state.recommends.map((recommend,index) =>{
             return (
@@ -58,9 +35,7 @@ class FontContainer extends Component {
             )
         })
     }
-    loadMore(){
-        this.getSwiperList();
-    }
+   
 
     async getSwiperList(){
         let result =await axios({
@@ -78,4 +53,4 @@ class FontContainer extends Component {
         this.setState({recommends:this.state.recommends});
     }
 }
-export default FontContainer
+export default mainWrapper(FontContainer)

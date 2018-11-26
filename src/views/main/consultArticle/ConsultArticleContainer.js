@@ -26,7 +26,7 @@ class ConsultArticleContainer extends Component {
     render () {
         let {match,history} = this.props;
         return (
-            <div style={{width:'100%',height:'571px',overflow:'hidden'}}>
+            <div style={{width:'100%',height:'15.226667rem',overflow:'hidden'}}>
                <StyledConsultArticleTab>
                     {
                         this.state.tabs.map(tab=>{

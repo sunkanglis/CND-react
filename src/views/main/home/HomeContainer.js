@@ -28,7 +28,7 @@ class HomeContainer extends Component {
     render(){
         // if(this.state.recommends.length <=0) return false;
         return (
-            <div style={{width:'100%',height:'571px',overflow:'hidden'}} ref={el => this.scrollWrapper = el}>
+            <div style={{width:'100%',height:'15.226667rem',overflow:'hidden'}} ref={el => this.scrollWrapper = el}>
                 <div >
                     <HomeSwiper/>
                     <SortTitle/>
@@ -46,8 +46,9 @@ class HomeContainer extends Component {
             click: true,
             mouseWheel:true,
         })
+        
     }
-   
+
     backTop(){
         this.scroll.scrollTo(0,0,500)
     }

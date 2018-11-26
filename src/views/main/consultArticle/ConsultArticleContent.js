@@ -22,7 +22,7 @@ class ConsultArticleContent extends Component{
     }
     render(){
         return(
-            <div style={{height:'526px',marginTop:'45px'}} ref={el => this.scrollWrapper = el}>
+            <div style={{height:'14.026667rem',marginTop:'1.2rem'}} ref={el => this.scrollWrapper = el}>
                 <div>
                     <Ul>
                         {this.renderItem()}
