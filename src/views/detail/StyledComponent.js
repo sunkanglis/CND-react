@@ -5,6 +5,11 @@ import sprite from '@as/images/sprite.png'
 export const StyledDetailContainer = styled.section`
     width:100%;
     height:100%;
+`
+
+export const StyledDetail = styled.div`
+    width:100%;
+    height:100%;
     .author-box{
         height: 1.413333rem;
         padding:.266667rem;
@@ -74,7 +79,7 @@ export const StyledDetailContainer = styled.section`
                     font-size:.32rem;
                 }
                 .ib_info{
-                    font-size:12px;
+                    font-size:.32rem;
                     color: #cbcbcb;
                     .icon{
                         display:inline-block;
@@ -85,7 +90,7 @@ export const StyledDetailContainer = styled.section`
                         margin-left:.266667rem;
                         &.icon-liulan{
                             background-position:0 -0.426667rem;
-                            margin-right:2px;
+                            margin-right:.053333rem;
                         }
                         &.icon-zan{
                           
@@ -93,19 +98,25 @@ export const StyledDetailContainer = styled.section`
                             background-position:0 -0.826667rem;
                         }
                         &.icon-pinlun{
-                            margin-right:2px;
-                            background-position:0 -52px;
+                            margin-right:.053333rem;
+                            background-position:0 -1.386667rem;
                         }
                     }
                 }
             }
         }
         .description{
-            font-size:15px;
+            margin-top:.266667rem;
+            font-size:.4rem;
         }
         .pics{
             width: 100%;
-            margin-top:10px;
+            
+        }
+        .insert-html{
+            p{
+                line-height:.693333rem
+            }
         }
     }
 `

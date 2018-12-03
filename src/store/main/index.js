@@ -2,11 +2,12 @@ import defaultState from  './defaultState'
 import { CHANGE_TABINDEX ,CHANGE_PDISSHOW} from "./actiontypes";
 
 
-import connect from '@connect';
+import {connect} from 'refit-connect';
 // 给connect 添加可配置的actionCreators
 import actionCreators from './actionCreators'
 
-connect.addActions({
+
+connect.addActionCreator({
     main: actionCreators
 })
 

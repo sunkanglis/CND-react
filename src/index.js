@@ -1,13 +1,15 @@
-import React from 'react';
+import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import '@lib'
-import { Provider } from 'react-redux'
+import { Provider } from 'refit-connect'
 import {BrowserRouter} from 'react-router-dom'
 import store from "@store";
 
+import axios from 'axios'
 
+Component.prototype.axios = axios
 
 ReactDOM.render(
     <Provider store ={ store}>

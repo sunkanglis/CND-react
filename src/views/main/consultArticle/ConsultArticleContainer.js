@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Route,Redirect,withRouter} from 'react-router-dom'
-import Ul from '@c/commons/ul'
 import {StyledConsultArticleTab ,StyledTabItem} from './styledComponent'
 
 
 import ConsultArticleContent from './ConsultArticleContent'
-import connect from '@connect'
+import {connect} from 'refit-connect'
+
 
 class ConsultArticleContainer extends Component {
     constructor(props){
@@ -51,7 +51,6 @@ class ConsultArticleContainer extends Component {
         )
     }
     componentWillUnmount(){
-        console.log(this.props)
     }
 }
 

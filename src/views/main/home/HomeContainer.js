@@ -8,7 +8,6 @@ import LoadMore from '@c/commons/loadmore'
 import Footer from '@c/commons/footer'
 import scroll from 'better-scroll'
 
-import axios from 'axios';
 
 class HomeContainer extends Component {
     constructor(props){
@@ -28,7 +27,7 @@ class HomeContainer extends Component {
     render(){
         // if(this.state.recommends.length <=0) return false;
         return (
-            <div style={{width:'100%',height:'571px',overflow:'hidden'}} ref={el => this.scrollWrapper = el}>
+            <div style={{width:'100%',height:'15.226667rem',overflow:'hidden'}} ref={el => this.scrollWrapper = el}>
                 <div >
                     <HomeSwiper/>
                     <SortTitle/>
@@ -66,7 +65,7 @@ class HomeContainer extends Component {
     }
 
     async getSwiperList(){
-        let result =await axios({
+        let result =await this.axios({
             url:'/cnd/API/Works',
             method:'get',
             params:{

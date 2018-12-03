@@ -42,3 +42,14 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+### 小知识点
+    <div dangerouslySetinnerHtml={{__html:data}}></div>
+    相当于 vue中的v-html
+
+    decorator 修饰器es6 其实就是一个函数  
+
+    类上的方法类的实例不能用、
+
+    function A()

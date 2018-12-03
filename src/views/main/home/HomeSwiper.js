@@ -1,7 +1,7 @@
 import React ,{ Component} from 'react'
 import { Carousel } from 'antd-mobile';
 // import {connect} from 'react-redux'
-import connect from '@connect'
+import {connect} from 'refit-connect'
 
 class HomeSwiper extends Component {
     render(){

@@ -1,11 +1,17 @@
 import React , {Component} from 'react';
 import { StyledHeader } from "./styledComponent";
 import Menu from './Menu'
+import {withRouter} from 'react-router-dom'
+
 
 class Header extends Component {
     state = {
         menuIsShow:false,
         className:'left-menu'
+    }
+    componentWillMount(){
+        if(this.props.match.path==='/detail')
+        this.setState({className:'left-back'})
     }
     render(){
         return(
@@ -25,6 +31,9 @@ class Header extends Component {
         )
     }
     changeState(){
+        if(this.state.className === 'left-back'){
+            this.props.history.go(-1);
+        }
         if(this.state.menuIsShow === false){
             this.setState({menuIsShow:!this.state.menuIsShow,className:'left-quiet'})
         }else{
@@ -32,4 +41,4 @@ class Header extends Component {
         }
     }
 }
-export default Header
+export default withRouter(Header)

@@ -1,12 +1,14 @@
 import React,{ Component } from 'react'
 import { StyledLi } from './styledComponent'
-
+import {withRouter} from 'react-router-dom'
+import qs from 'querystring'
 
 class SmallLi extends Component{
     render(){
-        let {className,cover,title,readCount,goodCount,nickName,timeSpan} = this.props;
+        let {className,cover,title,readCount,goodCount,nickName,timeSpan,history,worksID} = this.props;
+        let query = {id : worksID}
         return(
-            <StyledLi>
+            <StyledLi onClick={()=>history.push({pathname:'/detail', search: '?' + qs.stringify(query)})}>
                 <img src={cover} alt='' />
                 <div className = 'info'>
                     <h3>
@@ -33,4 +35,4 @@ class SmallLi extends Component{
     }
 }
 
-export default SmallLi
+export default withRouter(SmallLi)

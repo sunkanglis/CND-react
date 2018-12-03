@@ -7,8 +7,7 @@ import Footer from '@c/commons/footer'
 import scroll from 'better-scroll'
 import Classfiy from './classfiy'
 
-import axios from 'axios';
-import connect from '@connect'
+import {connect} from 'refit-connect'
 
 class ProductionContainer extends Component {
     constructor(props){
@@ -75,7 +74,7 @@ class ProductionContainer extends Component {
     }
     
     async getSwiperList(){
-        let result =await axios({
+        let result =await this.axios({
             url:'/cnd/API/Works',
             method:'get',
             params:{

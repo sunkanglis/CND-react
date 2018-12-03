@@ -1,12 +1,14 @@
 import React ,{Component} from 'react';
 import Ul from '@c/commons/ul'
-import axios from 'axios'
 import LargeLi from '@c/commons/largeLi'
 import scroll from 'better-scroll'
 
 import LoadMore from '@c/commons/loadmore'
 import Footer from '@c/commons/footer'
 
+ import {decorator} from '@lib/decorator'
+
+@decorator
 class ConsultArticleContent extends Component{
     constructor(props){
         super(props)
@@ -58,7 +60,7 @@ class ConsultArticleContent extends Component{
         this.getArticles();
     }
     async getArticles(){
-        let result =await axios({
+        let result =await this.axios({
             url:'/cnd/API/Article',
             method:'get',
             params:{

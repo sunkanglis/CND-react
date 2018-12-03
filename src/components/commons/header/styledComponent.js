@@ -16,6 +16,11 @@ export const StyledHeader = styled.header`
             display:inline-block;
             width:.592533rem;
             height:.685067rem;
+            &.left-back{
+                background:url(http://m.cndesign.com/assets/img/sprite-head.png) no-repeat;
+                background-size:1rem auto;
+                background-position:-0.08rem -1px;
+            }
             &.left-menu{
                 background:url(http://m.cndesign.com/assets/img/sprite-head.png) no-repeat;
                 background-size:1rem auto;

@@ -1,11 +1,14 @@
 import React,{ Component } from 'react'
 import { StyledLi } from './styledComponent'
+import {withRouter} from 'react-router-dom'
+import qs from 'querystring'
 
 class Largeli extends Component {
     render(){
-        let { cover,instruct,timeSpan,readCount,title} =this.props
+        let { cover,instruct,timeSpan,readCount,title,newsID,history} =this.props;
+        let query = {newsID};
         return(
-            <StyledLi>
+            <StyledLi onClick={()=>history.push({pathname:'/detail',search: '?' + qs.stringify(query)})}>
                 <img src={cover} alt=""/>
                 <div className='right'>
                     <h5 className='line-ellipsis'>{title}</h5>
@@ -19,4 +22,4 @@ class Largeli extends Component {
         )
     }
 }
-export default Largeli
+export default withRouter(Largeli)

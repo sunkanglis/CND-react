@@ -11,7 +11,7 @@ import FontContainer from './fonttype/FontContainer'
 import ProductionContainer from './production/ProductionContainer'
 import {withRouter} from 'react-router-dom'
 
-import connect from '@connect'
+import {connect} from 'refit-connect'
 
 class MainContainer extends Component{
     constructor(props){
@@ -24,10 +24,15 @@ class MainContainer extends Component{
                 {id: uuid(), title: '资讯/文章',component:<ConsultArticleContainer/> },
                 {id: uuid(), title: '字体',component:<FontContainer/> },
                 {id: uuid(), title: '地图',component:'字体12312' },
-            ]
+            ],
+            page:0
         }
-        
     }
+    componentWillMount(){
+        if(this.props.location.pathname !== '/main')
+        this.setState({page:2})
+    }
+
     render(){
         // console.log('render');
         return(
@@ -40,6 +45,7 @@ class MainContainer extends Component{
                             tabBarUnderlineStyle ={{borderColor:'#c30413'}}
                             swipeable = {false}
                             // prerenderingSiblingsNumber={0}
+                            page={this.state.page}
                             onTabClick= {(tab,index)=>{
                                 if(this.props.main.tabIndex === index ){
                                     this.props.main_actions.changePdIsShow()
@@ -49,6 +55,7 @@ class MainContainer extends Component{
                                 }else{
                                     this.props.history.push('/main/consult')
                                 }
+                                this.setState({page:index})
                                 this.props.main_actions.changeTabIndex(index)
                             }}
                         >
