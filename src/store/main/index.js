@@ -7,7 +7,7 @@ import {connect} from 'refit-connect';
 import actionCreators from './actionCreators'
 
 
-connect.addActionCreator({
+connect.addActionCreators({
     main: actionCreators
 })
 

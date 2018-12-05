@@ -18,7 +18,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.5",
     "redux-promise-middleware": "^5.1.1",
-    "refit-connect": "^1.0.2",
+    "refit-connect": "^1.0.5",
     "styled-components": "^4.1.1"
   },
   "scripts": {

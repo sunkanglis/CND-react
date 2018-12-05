@@ -5,7 +5,7 @@ import {connect} from 'refit-connect';
 // 给connect 添加可配置的actionCreators
 import actionCreators from './actionCreators'
 
-connect.addActionCreator({
+connect.addActionCreators({
     home: actionCreators
 })
 

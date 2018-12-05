@@ -8381,10 +8381,10 @@ redux@^4.0.1:
     loose-envify "^1.4.0"
     symbol-observable "^1.2.0"
 
-refit-connect@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/refit-connect/-/refit-connect-1.0.2.tgz#cb4a9ea402555b93b9b830a2cbe325e382196a26"
-  integrity sha512-mNDT1/K+bcprYEj9BSzQEVaqEOcoMS4tO15sL7b0h28GnBzi+XQZ4MyrnAbznrjW02da+u17m5cEkHW1mcn1aA==
+refit-connect@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/refit-connect/-/refit-connect-1.0.5.tgz#2c62f385558b7de13b7a3dd182e7d09d68d287d1"
+  integrity sha512-HYvuRpaIuGLIZn7zG4SezR3xO+cizunsNwOEYdMU2znazmB1fZ2uaL07oWMnXsxgzDLwFpLboGDeVAX0L5jf/g==
   dependencies:
     react-redux "^5.1.1"
     redux "^4.0.1"
